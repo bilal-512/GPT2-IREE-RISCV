@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated model/compiler artifacts (regenerate via scripts/)
+model/*.onnx
+mlir/*.mlir
+vmfb/*.vmfb
+
+# Logs
+logs/*.log
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
