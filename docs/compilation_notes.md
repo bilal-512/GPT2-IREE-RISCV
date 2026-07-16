@@ -32,45 +32,8 @@ output when running `iree-run-module` is expected, not an error.
 `iree-compile` lowers the imported MLIR through a sequence of internal phases before
 emitting the final VMFB:
 
-```
-Input MLIR
-    │
-    ▼
-ABI Generation
-    │
-    ▼
-Preprocessing
-    │
-    ▼
-Global Optimizations
-    │
-    ▼
-Dispatch Creation
-    │
-    ▼
-Flow
-    │
-    ▼
-Stream
-    │
-    ▼
-Executable Sources
-    │
-    ▼
-Executable Configurations
-    │
-    ▼
-Executable Targets
-    │
-    ▼
-HAL
-    │
-    ▼
-VM
-    │
-    ▼
-VMFB
-```
+<img width="911" height="561" alt="Flow drawio" src="https://github.com/user-attachments/assets/37b1f6af-1850-4592-883e-b476a6de0535" />
+
 
 | Phase | Purpose |
 |---|---|
