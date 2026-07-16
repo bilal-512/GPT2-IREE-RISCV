@@ -19,28 +19,8 @@ Modern LLMs are almost always deployed on x86 or ARM. This project explores what
 
 **Pipeline:**
 
-```
-PyTorch GPT-2
-      │
-      ▼
- Export to ONNX (opset 17)
-      │
-      ▼
- IREE ONNX Importer  →  MLIR (main_graph)
-      │
-      ▼
- IREE Compiler (LLVM CPU backend)
-      │
-  ┌───┴────────────┐
-  ▼                ▼
-x86 VMFB       RISC-V VMFB (RV64GC, lp64d)
-  │                │
-  ▼                ▼
-IREE Runtime    QEMU (qemu-riscv64) + IREE Runtime
-  │                │
-  ▼                ▼
-Output Logits   Output Logits
-```
+<img width="1102" height="1201" alt="GPT2_MLIR_FLOW drawio" src="https://github.com/user-attachments/assets/73dc3349-982b-439f-9576-4475fce29df9" />
+
 
 ## Status
 
@@ -89,7 +69,7 @@ GPT2-IREE-RISCV/
 ## Quickstart
 
 ```bash
-git clone https://github.com/<you>/GPT2-IREE-RISCV.git
+git clone https://github.com/bilal-512/GPT2-IREE-RISCV.git
 cd GPT2-IREE-RISCV
 
 python3 -m venv .venv
